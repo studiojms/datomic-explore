@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: akiel/datomic-free
+    ports:
+      - "4334-4336:4334-4336"
+    restart: on-failure
+    environment:
+      ADMIN_PASSWORD: admin
+      DATOMIC_PASSWORD: 12345
